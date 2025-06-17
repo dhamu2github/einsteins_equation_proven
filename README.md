@@ -76,10 +76,12 @@ cd einsteins_equation_proven
 2. Create and activate virtual environment:
 ```bash
 # Windows
+cd einsteins_equation_proven/core_simulation
 uv venv -p 3.12 .venv
 .venv\Scripts\activate
 
 # macOS/Linux
+cd einsteins_equation_proven/core_simulation
 uv venv -p 3.12 .venv
 source .venv/bin/activate
 ```
