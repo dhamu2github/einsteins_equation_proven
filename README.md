@@ -2,7 +2,7 @@
 
 An interactive educational visualization demonstrating thermal dynamics and mass-energy equivalence through a water boiling simulation and Einstein's famous equation E=mc².
 
-![Simulation Preview](./static/images/simulation_preview.jpg)
+![Simulation Preview](./core_simulation/static/images/simulation_preview.jpg)
 
 ## Overview
 
