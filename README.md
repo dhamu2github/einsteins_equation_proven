@@ -69,8 +69,8 @@ numpy==1.26.2
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd physics-energy-simulator
+git clone https://github.com/dhamu2github/einsteins_equation_proven.git
+cd einsteins_equation_proven
 ```
 
 2. Create and activate virtual environment:
@@ -111,7 +111,7 @@ http://localhost:5000
 ## Project Structure
 
 ```
-physics-energy-simulator/
+einsteins_equation_proven/
 ├── core_simulation/           # Core simulation components
 │   ├── app.py                # Flask application entry point
 │   ├── main.py              # Main entry point
