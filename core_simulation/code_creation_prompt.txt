@@ -1,9 +1,11 @@
----------------------------------------------Initial Prompt---------------------------------
+---------------------------------------------------------------My Thought/Prompt----------------------------------------------------------------------------
+can you create a prompt to prove Albert Einstein equation e=mc2 to see visually how it works.
+Consider I am boiling water that stream gets converted into water again.
+
+---------------------------------------------------------------Meta Prompt using Perflexity------------------------------------------------------------------
 
 Objective
-Create an interactive educational visualization that begins with a familiar, everyday process—boiling water 
-and steam condensation—and transitions into a conceptual and quantitative demonstration of Einstein’s famous 
-equation E = mc², helping users intuitively grasp the principle of mass-energy equivalence.
+Create an interactive educational visualization that begins with a familiar, everyday process—boiling water and steam condensation—and transitions into a conceptual and quantitative demonstration of Einstein’s famous equation E = mc², helping users intuitively grasp the principle of mass-energy equivalence.
 
 Step 1: Boiling Water and Steam Condensation
 Setup:
@@ -89,12 +91,11 @@ Quantifies Einstein’s equation
 Ends with real-world, high-impact applications
 
 
----------------------------------------Prompted created after generated the code-----------------------------------------
+---------------------------------------------------------------Following Prompt Created from the Product------------------------------------------------------------------
 
 # Project Recreation Prompt: Physics Energy Transformation Simulator
 
-Create an interactive web-based physics simulation demonstrating thermal dynamics and mass-energy equivalence. 
-The project should combine a water boiling visualization with Einstein's E=mc² calculator.
+Create an interactive web-based physics simulation demonstrating thermal dynamics and mass-energy equivalence. The project should combine a water boiling visualization with Einstein's E=mc² calculator.
 
 ## Core Requirements
 
@@ -258,3 +259,4 @@ To recreate this project:
 2. Request implementation in stages
 3. Ask for specific component details as needed
 4. Use it as a reference for verification
+

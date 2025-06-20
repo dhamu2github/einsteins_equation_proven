@@ -88,6 +88,11 @@
                     <h5 class="card-title">Simulation Status</h5>
                     <div id="infoPanel" class="info-panel"></div>
                 </div>
+
+                <!-- Demo Image Button -->
+                <div class="text-center mt-3">
+                    <a href="#" id="showDemoImage" class="btn btn-primary">Show Demo Image</a>
+                </div>
             </div>
 
             <!-- Right Column - Einstein Information -->
@@ -130,7 +135,55 @@
         </audio>
     </div>
 
+    <!-- Demo Image Popup -->
+    <div id="demoImagePopup" class="demo-popup" style="display: none;">
+        <div class="demo-popup-content">
+            <span class="demo-popup-close">&times;</span>
+            <img src="{{ url_for('static', filename='images/prompt_product.png') }}" 
+                 alt="Demo Image" 
+                 class="demo-popup-image">
+        </div>
+    </div>
+
     <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
     <script src="{{ url_for('static', filename='simulation.js') }}"></script>
+
+    <!-- Add JavaScript for popup functionality -->
+    <script>
+        (function() {
+            // Isolate popup functionality in its own scope
+            const demoPopup = document.getElementById('demoImagePopup');
+            const demoBtn = document.getElementById('showDemoImage');
+            const closeBtn = document.getElementsByClassName('demo-popup-close')[0];
+
+            // Handle button click
+            demoBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                demoPopup.style.display = 'flex';
+            });
+
+            // Handle close button click
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                demoPopup.style.display = 'none';
+            });
+
+            // Handle click outside popup content
+            demoPopup.addEventListener('click', function(e) {
+                if (e.target === demoPopup) {
+                    demoPopup.style.display = 'none';
+                }
+            });
+
+            // Handle escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && demoPopup.style.display === 'flex') {
+                    demoPopup.style.display = 'none';
+                }
+            });
+        })();
+    </script>
 </body>
 </html> 

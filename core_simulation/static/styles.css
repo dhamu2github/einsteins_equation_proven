@@ -143,7 +143,7 @@ h1 {
     background-color: #ffffff;
     border-radius: 6px;
     padding: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -372,7 +372,133 @@ h1 {
     display: none;
 }
 
-/* Responsive Adjustments */
+/* Demo Image Popup Styling */
+.demo-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-popup-content {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px; /* Medium size */
+    margin: 20px;
+    animation: popupFade 0.3s ease;
+}
+
+.demo-popup-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #0d6efd;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+.demo-popup-close:hover {
+    color: #0a58ca;
+}
+
+.demo-popup-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Updated Button and Info Card Styling */
+#showDemoImage {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    background-color: transparent !important;
+    border-color: rgba(13, 110, 253, 0.1) !important;
+    color: rgba(13, 110, 253, 0.3) !important;
+    text-transform: lowercase;
+    font-weight: normal;
+    box-shadow: none !important;
+}
+
+#showDemoImage:hover {
+    background-color: rgba(13, 110, 253, 0.05) !important;
+    border-color: rgba(13, 110, 253, 0.2) !important;
+    color: rgba(13, 110, 253, 0.5) !important;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 0; /* Remove bottom margin since we're adding the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Demo Image Styling */
+.demo-image-wrapper {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Medium size container */
+    transition: all 0.3s ease;
+}
+
+.demo-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+#showDemoImage {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+/* Add responsive styles for demo image */
+@media (max-width: 768px) {
+    .demo-image-wrapper {
+        max-width: 90%; /* Adjust for smaller screens */
+        margin: 15px auto;
+    }
+}
+
 @media (max-width: 992px) {
     #simulationCanvas {
         height: 220px;
